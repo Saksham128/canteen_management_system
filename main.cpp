@@ -1,4 +1,4 @@
-// Developed by CodeWithC.com
+
 #include<iostream>
 #include<cstdio>
 #include<fstream>
@@ -58,7 +58,7 @@ Canteen::Canteen()
     else
         cout << "Failed To Connect!" << mysql_errno(conn) << endl;
 }
-// Developed by CodeWithC.com
+
 void Canteen::addNewItem()
 {
     system("cls");
@@ -117,7 +117,7 @@ void Canteen::addNewSale(string name, string quantity)
         cout << "Query Execution Problem!" << mysql_errno(conn) << endl;
     }
 }
-// Developed by CodeWithC.com
+
 void Canteen::allItems()
 {
     qstate = mysql_query(conn, "select * from items");
@@ -185,7 +185,7 @@ bool Canteen::searchById(string id)
 
     return found;
 }
-// Developed by CodeWithC.com
+
 bool Canteen::searchByName(string name)
 {
     string query = "SELECT name FROM items";
@@ -359,7 +359,7 @@ void Canteen::show()
     cout << "7.Exit" << endl;
     cout<<"Enter your choice: ";
 }
-// Developed by CodeWithC.com
+
 int main()
 {
     system("cls");
